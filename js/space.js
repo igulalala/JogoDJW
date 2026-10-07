@@ -6,14 +6,16 @@ const mensagemModal = document.getElementById('mensagemModal')
 const botaooContinuar = document.getElementById('botaoContinuar')
 const botaoTerminar = document.getElementById('botaoTerminar')
 
-class obj {
+class jogador extends obj {
 
     constructor(posx, posy, largura, altura, cor){
-        this.posx = posx
-        this.posy = posy 
-        this.largura = largura
-        this.altura = altura
-        this.cor = cor
+
+        super(posx,posy,largura,altura)
+
+        this.imagem = this.imagem
+        this.velocidade = 0
+
+        this.vidas = parseInt(localStorage.getItem('vidas'),10) || 3
 
     }
     desenhar(){
